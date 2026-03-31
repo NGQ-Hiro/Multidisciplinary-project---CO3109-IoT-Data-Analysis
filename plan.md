@@ -63,3 +63,48 @@
 - *Bước 1*: Trong lúc xử lý dữ liệu realtime, hệ thống Data Analysis phát hiện các tình trạng nguy hiểm như: nhiệt độ cao bất thường hoặc độ ẩm quá cao.
 - *Bước 2*: Ngay lập tức, hệ thống kích hoạt luồng cảnh báo.
 - *Bước 3*: Backend gửi Notification trực tiếp đến App của người dùng để họ kịp thời xử lý.
+
+# Đề xuất một số API cần thiết kế
+## Quy chuẩn chung:
+- URL Base: `/api/v1`
+- Authentication: Headers: `Authorization: Bearer <access_token>` (Có thể dùng cái khác nếu muốn đồ ắn đơn giản hơn (1 tín))
+- Response Format (JSON):
+
+```json
+{
+  "message": "Mô tả kết quả (Thành công/Lỗi)",
+  "data": {}
+}
+```
+
+- Cụ thể:
+
+```json
+{
+  "message": "string",
+  "data": "object | array | null"
+}
+```
+
+### Load balancer -> Backend (Giao tiếp nội bộ)
+- `POST /internal/telemetry`
+  - **Mục đích**: Routing các request về các server Backend, request dạng HTTP, kèm data trong body. Backend sẽ nhận dữ liệu này để lưu trữ và phân tích.
+  - **Body (JSON)**: Chứa thông tin thiết bị, loại cảm biến và giá trị (độ ẩm đất, nhiệt độ, ánh sáng).
+
+### App -> Backend (Giám sát và Hiển thị)
+- `GET /sensors/latest`: Lấy dữ liệu cảm biến mới nhất để hiển thị tổng quan trên màn hình chính của Dashboard.
+- `GET /sensors/history`: Lấy dữ liệu theo chuỗi thời gian để vẽ chart độ ẩm / nhiệt độ. Có thể truyền query parameters như `?start_time=...&end_time=...`.
+- `GET /analysis/insights`: Truy xuất kết quả từ module Data Analysis, bao gồm thông tin thời gian đất khô nhanh nhất và đề xuất lịch tưới tối ưu.
+
+### App -> Backend (Điều khiển thiết bị)
+- `POST /devices/control`: Nhận yêu cầu khi User bấm "Bật tưới" hoặc gửi lệnh điều khiển đổi đèn led, lcd, bật quạt. Backend sẽ nhận API này và tiến hành gửi command -> Adafruit IO.
+- `PUT /settings/thresholds`: Cho phép người dùng hoặc admin cấu hình ngưỡng (threshold) nhiệt độ/độ ẩm. Backend phân tích nếu < threshold thì gửi command -> bật bơm.
+
+### App -> Backend (Hệ thống cảnh báo)
+- `GET /alerts`: Truy xuất danh sách lịch sử các cảnh báo (notification) khi hệ thống detect nhiệt độ cao bất thường, độ ẩm quá cao.
+- `POST /alerts/read/{alert_id}`: Đánh dấu một cảnh báo đã được người dùng đọc.
+
+### MQTT (Edge <-> Adafruit <-> Load Balancer)
+- Ở tầng dưới cùng, thiết bị Edge không gọi REST API mà sử dụng giao thức MQTT -> Adafruit IO. Cấu trúc Topic MQTT nên được thiết kế rõ ràng, ví dụ:
+  - Publish dữ liệu: `trinhnguyenktmtbk0711/feeds/sensor.temperature`
+  - Subscribe nhận lệnh: `trinhnguyenktmtbk0711/feeds/control.pump`
