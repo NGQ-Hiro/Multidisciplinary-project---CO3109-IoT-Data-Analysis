@@ -1,0 +1,119 @@
+[
+  {
+    "id": "0G467PHSN0ZSK7869CWRNMEZXE",
+    "value": "93",
+    "feed_id": 3328880,
+    "feed_key": "luminor-test1",
+    "created_at": "2026-03-16T03:43:18Z",
+    "created_epoch": 1773632598,
+    "expiration": "2026-04-15T03:43:18Z"
+  },
+  {
+    "id": "0G467PGCS62949N4ZTVB0V6HQB",
+    "value": "93",
+    "feed_id": 3328880,
+    "feed_key": "luminor-test1",
+    "created_at": "2026-03-16T03:43:13Z",
+    "created_epoch": 1773632593,
+    "expiration": "2026-04-15T03:43:13Z"
+  },
+  {
+    "id": "0G467PFBMWC38GXBEPBPE2S3S3",
+    "value": "93",
+    "feed_id": 3328880,
+    "feed_key": "luminor-test1",
+    "created_at": "2026-03-16T03:43:10Z",
+    "created_epoch": 1773632590,
+    "expiration": "2026-04-15T03:43:10Z"
+  },
+  {
+    "id": "0G467PEQN8V34K9N1G31CVEYMP",
+    "value": "93",
+    "feed_id": 3328880,
+    "feed_key": "luminor-test1",
+    "created_at": "2026-03-16T03:43:08Z",
+    "created_epoch": 1773632588,
+    "expiration": "2026-04-15T03:43:08Z"
+  },
+  {
+    "id": "0G467PDHMH9A0QJH5S4D7Z6QC6",
+    "value": "92",
+    "feed_id": 3328880,
+    "feed_key": "luminor-test1",
+    "created_at": "2026-03-16T03:43:04Z",
+    "created_epoch": 1773632584,
+    "expiration": "2026-04-15T03:43:04Z"
+  },
+  {
+    "id": "0G467PCWMYBYDQZVHSTE7MPNKK",
+    "value": "93",
+    "feed_id": 3328880,
+    "feed_key": "luminor-test1",
+    "created_at": "2026-03-16T03:43:02Z",
+    "created_epoch": 1773632582,
+    "expiration": "2026-04-15T03:43:02Z"
+  },
+  {
+    "id": "0G467PBNN4KPPQM7WR0VNF0V7P",
+    "value": "93",
+    "feed_id": 3328880,
+    "feed_key": "luminor-test1",
+    "created_at": "2026-03-16T03:42:58Z",
+    "created_epoch": 1773632578,
+    "expiration": "2026-04-15T03:42:58Z"
+  },
+  {
+    "id": "0G467PB2S5K5YSV02D0YN94P3Z",
+    "value": "93",
+    "feed_id": 3328880,
+    "feed_key": "luminor-test1",
+    "created_at": "2026-03-16T03:42:56Z",
+    "created_epoch": 1773632576,
+    "expiration": "2026-04-15T03:42:56Z"
+  },
+  {
+    "id": "0G467PAHMYABR1R29YPMHHB374",
+    "value": "93",
+    "feed_id": 3328880,
+    "feed_key": "luminor-test1",
+    "created_at": "2026-03-16T03:42:54Z",
+    "created_epoch": 1773632574,
+    "expiration": "2026-04-15T03:42:54Z"
+  },
+  {
+    "id": "0G467P99P11YTYSTYYTH55ATF4",
+    "value": "93",
+    "feed_id": 3328880,
+    "feed_key": "luminor-test1",
+    "created_at": "2026-03-16T03:42:50Z",
+    "created_epoch": 1773632570,
+    "expiration": "2026-04-15T03:42:50Z"
+  },
+  {
+    "id": "0G467P8CMW77A239AEVA7QZM1H",
+    "value": "93",
+    "feed_id": 3328880,
+    "feed_key": "luminor-test1",
+    "created_at": "2026-03-16T03:42:47Z",
+    "created_epoch": 1773632567,
+    "expiration": "2026-04-15T03:42:47Z"
+  },
+  {
+    "id": "0G467P75R0D57F770EB66P9QN2",
+    "value": "93",
+    "feed_id": 3328880,
+    "feed_key": "luminor-test1",
+    "created_at": "2026-03-16T03:42:43Z",
+    "created_epoch": 1773632563,
+    "expiration": "2026-04-15T03:42:43Z"
+  },
+  {
+    "id": "0G467P75R0D57F770EB66P9QN2",
+    "value": "50",
+    "feed_id": 3328880,
+    "feed_key": "luminor-test1",
+    "created_at": "2026-03-17T03:42:43Z",
+    "created_epoch": 1773718963,
+    "expiration": "2026-04-16T03:42:43Z"
+  }
+]

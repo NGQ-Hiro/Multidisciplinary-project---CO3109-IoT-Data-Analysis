@@ -1,1 +1,0 @@
-# Tính toán average độ ẩm, xu hướng khô đất
