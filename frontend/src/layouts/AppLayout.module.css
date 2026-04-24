@@ -1,0 +1,18 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
+.footer {
+  background-color: var(--color-forest-black);
+  color: var(--color-cool-gray);
+  padding: var(--space-4) 0;
+  font-size: var(--font-size-caption);
+  text-align: center;
+  border-top: 1px solid var(--color-teal-gray);
+}

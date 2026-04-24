@@ -1,0 +1,81 @@
+:root {
+  /* Brand Colors */
+  --color-forest-black: #001e2b;
+  --color-mongo-green: #00ed64;
+  --color-dark-green: #00684a;
+  --color-success-green: #00a35c;
+
+  /* Interactive Colors */
+  --color-action-blue: #006cfa;
+  --color-hover-blue: #3860be;
+  --color-teal-active: #1eaedb;
+
+  /* Neutral Scale */
+  --color-deep-teal: #1c2d38;
+  --color-teal-gray: #3d4f58;
+  --color-dark-slate: #21313c;
+  --color-cool-gray: #5c6c75;
+  --color-silver-teal: #b8c4c2;
+  --color-light-input: #f4f6f5;
+  --color-pure-white: #ffffff;
+  --color-black: #000000;
+  --color-border: #e8edeb;
+
+  /* Typography Scale */
+  --font-family-display: 'Euclid Circular A', 'Inter', 'system-ui', sans-serif;
+  --font-family-body: 'Inter', 'Euclid Circular A', 'system-ui', sans-serif;
+  --font-family-code: 'Source Code Pro', monospace;
+
+  /* Font Sizes */
+  --font-size-hero: 4rem; /* Reduced from 6rem for better readability */
+  --font-size-sub-hero: 2.5rem;
+  --font-size-h1: 2rem;
+  --font-size-h2: 1.25rem;
+  --font-size-body-large: 1.125rem;
+  --font-size-body: 1rem;
+  --font-size-body-light: 0.9375rem;
+  --font-size-caption: 0.8125rem;
+  --font-size-small: 0.75rem;
+
+  /* Spacing Scale (8px base) */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-10: 80px;
+
+  /* Border Radii */
+  --radius-subtle: 4px;
+  --radius-standard: 8px;
+  --radius-card: 12px;
+  --radius-large: 16px;
+  --radius-pill: 100px;
+
+  /* Shadows */
+  --shadow-subtle: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-standard: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-prominent: 0px 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Light Theme (Default for Content) */
+.theme-light {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fbfa;
+  --text-primary: #001e2b;
+  --text-secondary: #5c6c75;
+  --border-color: #e8edeb;
+  --card-shadow: var(--shadow-standard);
+}
+
+/* Dark Theme (Default for Hero/Features) */
+.theme-dark {
+  --bg-primary: #001e2b;
+  --bg-secondary: #002e3a;
+  --text-primary: #ffffff;
+  --text-secondary: #b8c4c2;
+  --border-color: #1c2d38;
+  --card-shadow: var(--shadow-prominent);
+}

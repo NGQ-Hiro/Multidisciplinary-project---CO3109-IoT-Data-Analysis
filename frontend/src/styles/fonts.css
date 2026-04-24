@@ -1,0 +1,5 @@
+/* Note: Ideally these would load actual web fonts (e.g. from Google Fonts or local assets). 
+   For now, we rely on the defined fallbacks or standard system fonts if the specific ones are missing. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500;600&display=swap');
+
+/* Euclid Circular A & MongoDB Value Serif would typically be loaded via @font-face with local files */

@@ -1,0 +1,109 @@
+.header {
+  background-color: rgba(0, 30, 43, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(61, 79, 88, 0.5);
+  height: 72px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  color: var(--color-pure-white);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-pure-white);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.icon {
+  color: var(--color-mongo-green);
+}
+
+.wordmark {
+  font-weight: 700;
+  font-size: var(--font-size-body-large);
+  letter-spacing: -0.01em;
+}
+
+.nav {
+  display: flex;
+  gap: var(--space-4);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.nav a {
+  color: var(--color-silver-teal);
+  font-size: var(--font-size-body-light);
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  transition: all 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--color-pure-white);
+  background: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+}
+
+.nav a.active {
+  color: var(--color-forest-black);
+  background: var(--color-mongo-green);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-standard);
+  color: var(--color-pure-white);
+  font-size: var(--font-size-caption);
+}
+
+.username {
+  font-weight: 600;
+  color: var(--color-mongo-green);
+}
+
+.logoutBtn {
+  background: none;
+  border: none;
+  color: var(--color-cool-gray);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+
+.logoutBtn:hover {
+  color: #ff6b6b;
+}

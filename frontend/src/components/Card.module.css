@@ -1,0 +1,45 @@
+.card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-card);
+  color: var(--text-primary);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover {
+  border-color: var(--color-mongo-green);
+  transform: translateY(-2px);
+}
+
+/* Elevations */
+.elevation-none {
+  box-shadow: none;
+  border-color: var(--border-color);
+}
+
+.elevation-subtle {
+  box-shadow: var(--shadow-subtle);
+}
+
+.elevation-standard {
+  box-shadow: var(--shadow-standard);
+}
+
+.elevation-prominent {
+  box-shadow: var(--shadow-prominent);
+}
+
+/* Paddings */
+.padding-none {
+  padding: 0;
+}
+
+.padding-standard {
+  padding: var(--space-3);
+}
+
+.padding-large {
+  padding: var(--space-4);
+}

@@ -1,0 +1,218 @@
+.section {
+  margin-bottom: var(--space-8);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: var(--space-4);
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  border-bottom: 2px solid var(--bg-secondary);
+  padding-bottom: var(--space-2);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.configCard {
+  border: 1px solid var(--border-color);
+  background-color: var(--color-pure-white);
+  transition: all 0.3s ease;
+}
+
+.configCard:hover {
+  border-color: var(--color-mongo-green);
+  box-shadow: var(--shadow-standard);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  background: var(--bg-secondary);
+  padding: var(--space-3);
+  border-radius: var(--radius-standard);
+}
+
+.modeSelector {
+  display: flex;
+  background-color: var(--bg-secondary);
+  padding: 4px;
+  border-radius: var(--radius-pill);
+  gap: 4px;
+  margin-bottom: var(--space-3);
+}
+
+.modeBtn {
+  flex: 1;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 10px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: transparent;
+  color: var(--color-cool-gray);
+}
+
+.modeBtnActive {
+  background-color: var(--color-mongo-green);
+  color: var(--color-forest-black);
+  box-shadow: var(--shadow-subtle);
+}
+
+.durationGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: var(--space-2);
+}
+
+.durationInput {
+  width: 60px;
+  padding: 4px 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.durationLabel {
+  font-size: 10px;
+  color: var(--color-cool-gray);
+  font-weight: 600;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formGroup label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-cool-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.formGroup input {
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: var(--font-size-body-light);
+  background-color: var(--color-pure-white);
+  transition: all 0.2s ease;
+  font-family: var(--font-family-code);
+  font-weight: 600;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: var(--color-mongo-green);
+  box-shadow: 0 0 0 3px rgba(0, 237, 100, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-2);
+}
+
+.statusPill {
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.statusPillSmall {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.statusOn {
+  background-color: rgba(0, 237, 100, 0.15);
+  color: var(--color-dark-green);
+  border: 1px solid rgba(0, 237, 100, 0.3);
+}
+
+.statusOff {
+  background-color: rgba(92, 108, 117, 0.1);
+  color: var(--color-cool-gray);
+  border: 1px solid rgba(92, 108, 117, 0.2);
+}
+
+.badge {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.badgeManual {
+  background-color: rgba(0, 108, 250, 0.1);
+  color: var(--color-action-blue);
+}
+
+.badgeAuto {
+  background-color: rgba(0, 237, 100, 0.1);
+  color: var(--color-dark-green);
+}
+
+.tableContainer {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--color-pure-white);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-subtle);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: var(--color-cool-gray);
+  letter-spacing: 0.1em;
+}
+
+.table td {
+  padding: var(--space-3);
+  border-bottom: 1px solid var(--border-color);
+  font-size: var(--font-size-caption);
+  color: var(--text-primary);
+}
+
+.table tr:hover td {
+  background-color: var(--bg-secondary);
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}

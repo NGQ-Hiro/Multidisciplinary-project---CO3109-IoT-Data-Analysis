@@ -1,0 +1,116 @@
+.analyticsHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.leftFilters {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.rightActions {
+  display: flex;
+  gap: var(--space-2);
+  margin-left: auto;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filterGroup label {
+  font-size: var(--font-size-small);
+  font-weight: 700;
+  color: var(--color-cool-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.filterGroup select,
+.filterGroup input {
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: var(--font-size-caption);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-width: 120px;
+  height: 40px; /* Ensure fixed height for alignment */
+}
+
+.actionButton {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filterGroup select:focus,
+.filterGroup input:focus {
+  outline: none;
+  border-color: var(--color-mongo-green);
+  box-shadow: 0 0 0 2px rgba(0, 237, 100, 0.1);
+}
+
+.analyticsCard {
+  margin-top: var(--space-4);
+  border: none;
+}
+
+.chartsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  margin-top: var(--space-6);
+}
+
+.chartSection {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: var(--space-6);
+}
+
+.chartSection:last-child {
+  border-bottom: none;
+}
+
+.chartContainer {
+  height: 300px;
+  margin: var(--space-2) 0;
+  position: relative;
+}
+
+.kpiGrid {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-bottom: var(--space-4);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 237, 100, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 237, 100, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 237, 100, 0);
+  }
+}
