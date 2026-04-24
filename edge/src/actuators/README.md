@@ -1,1 +1,0 @@
-# Code đọc dữ liệu: độ ẩm đất, nhiệt độ, ánh sáng

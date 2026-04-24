@@ -1,0 +1,60 @@
+services:
+  # Database
+  db:
+    image: timescale/timescaledb:latest-pg16
+    container_name: smart_agri_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: ${POSTGRES_DATABASE:-smart_agriculture}
+    ports:
+      - "5432:5432"
+    volumes:
+      - timescaledb_data:/var/lib/postgresql/data
+      - ./backend/src/database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ./backend/src/database/seed.sql:/docker-entrypoint-initdb.d/02-seed.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d smart_agriculture"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  # API Backend
+  backend:
+    build: ./backend
+    container_name: smart_agri_backend
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    environment:
+      - NODE_ENV=production
+      - POSTGRES_HOST=db
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=${POSTGRES_USER:-postgres}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-postgres}
+      - POSTGRES_DATABASE=${POSTGRES_DATABASE:-smart_agriculture}
+      # when add loadbalancer change this to url of load balancer
+      - ALLOWED_ORIGIN=http://localhost:8080
+      - USER_ADA=${USER_ADA}
+      - KEY_ADA=${KEY_ADA}
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # Web Frontend
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        # when add loadbalancer change this to url of load balancer
+        - VITE_API_URL=http://localhost:4000/api/v1
+    container_name: smart_agri_frontend
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+
+volumes:
+  timescaledb_data:

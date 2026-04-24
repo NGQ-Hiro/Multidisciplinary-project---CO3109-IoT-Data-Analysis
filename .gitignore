@@ -1,1 +1,4 @@
 test/
+.github/
+test loadbalancer/
+GEMINI.md
